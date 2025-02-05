@@ -30,7 +30,7 @@
                 <p>A mission unlike any other, where the very fabric of reality bends to the will of the unknown.</P>
                 <p>Beyond the stars, beyond the reach of history, lies a destination shrouded in secrecy—an expedition into the undiscovered.</p>
                 <P>The mission is classified. The details are restricted. All that is known is that you were chosen for a reason.</P>
-                <button onclick="changeImage(1)" class="welcome-btn">Join Mission</button>
+                <a href="{{ url('/missions') }}" class="welcome-btn">Join Mission</a>
             </div>
         </div>
 
