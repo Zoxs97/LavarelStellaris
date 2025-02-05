@@ -1,0 +1,486 @@
+* {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: rgba(51, 51, 51, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    padding: 2px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    padding: 5px;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Neon Hover Effect */
+.nav-links li a:hover {
+    color: white;
+    text-shadow: 3px 5px 12px green, 3px 5px 12px green;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.title-container-middle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 0;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.main-text{
+    animation: glowEffectGreen 1.5s infinite alternate ease-in-out, slideIn 1s ease-out;
+}
+
+
+.fs-30 { font-size: 30px; }
+.fs-80 { font-size: 80px; }
+
+
+.brand {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8), 0px 0px 20px rgba(255, 0, 0, 0.5);
+    animation: glowEffectRed 1.5s infinite alternate ease-in-out, slideIn 1s ease-out;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    margin-top: 110px;
+    color: white;
+    text-align: center;
+}
+
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.mission-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+.mission-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 250px;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.mission-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+.mission-image-container .bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.4);
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.mission-image-container:hover .bg-image {
+    transform: scale(1.15);
+    filter: brightness(0.8);
+}
+
+.mission-description {
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.mission-image-container:hover .mission-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title-mission {
+    font-size: 40px;
+    font-weight: bold;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.mission-image-container:hover .title-mission {
+    font-size: 35px;
+    color: #f8f8f8;
+}
+
+/* Forms */
+.contact-container, .booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px;
+    color: white;
+}
+
+.contact-card, .booking-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form, .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #00c8ff;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: black;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.contact-btn, .booking-btn, .welcome-btn {
+    background: linear-gradient(45deg, #007bff, #00c8ff);
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-btn:hover, .booking-btn:hover, .welcome-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    color: white;
+    text-align: center;
+}
+
+
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.6);
+}
+
+
+.about-card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00c8ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+}
+
+
+.about-card p {
+    font-size: 18px;
+    color: white;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    position: fixed;
+    bottom: 10px; 
+    left: 10px; 
+    z-index: 1000; 
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.video-container video {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.live-stream-title {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+    animation: glowEffectRed 1.5s infinite alternate ease-in-out, slideIn 1s ease-out;
+}
+
+.display-time {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+.about-timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    padding-left: 20px;
+    border-left: 4px solid rgba(0, 150, 255, 0.8);
+}
+
+
+.timeline-item {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+    color: white;
+}
+
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+}
+
+
+.timeline-item::before {
+    content: "●";
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    font-size: 24px;
+    color: rgba(0, 150, 255, 1);
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+    animation: glowEffectBlue 1.5s infinite alternate ease-in-out;
+}
+.mission-section{
+    padding-top: 10px;
+}
+
+.timeline-item h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00c8ff;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 16px;
+    color: white;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 40px 10px;
+    }
+
+    .about-card {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .about-timeline {
+        padding-left: 10px;
+        border-left: 3px solid rgba(0, 150, 255, 0.7);
+    }
+
+    .timeline-item {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .timeline-item::before {
+        left: -25px;
+        font-size: 20px;
+    }
+}
+
+
+/* Animations */
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 25px rgba(0, 150, 255, 0.8); }
+    100% { opacity: 0.8; text-shadow: 0 0 35px rgba(0, 150, 255, 1); }
+}
+
+@keyframes glowEffectRed {
+    0%, 100% { text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.7), 0px 0px 15px rgba(255, 0, 0, 0.4); }
+    50% { text-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowEffectBlue {
+    0% { text-shadow: 0 0 10px rgba(0, 150, 255, 0.7); }
+    50% { text-shadow: 0 0 20px rgba(0, 150, 255, 1); }
+    100% { text-shadow: 0 0 10px rgba(0, 150, 255, 0.7); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes glowEffectBlue {
+    0% { text-shadow: 0 0 10px rgba(0, 150, 255, 0.7); }
+    50% { text-shadow: 0 0 20px rgba(0, 150, 255, 1); }
+    100% { text-shadow: 0 0 10px rgba(0, 150, 255, 0.7); }
+}
